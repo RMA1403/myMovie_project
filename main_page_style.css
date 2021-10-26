@@ -1,5 +1,133 @@
+:root {
+  --green: #77d970;
+  --blue: #172774;
+  --transparent: rgba(238, 238, 238, 0.35);
+}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: 72px;
+}
+.page-title {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 900;
+  font-size: 64px;
+  margin-bottom: 15px;
+  color: var(--green);
+}
+.page-title .my {
+  color: var(--blue);
+}
+.title-paragraph {
+  width: 443px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  margin-bottom: 45px;
+}
+.searchbar {
+  width: 561px;
+  height: 49px;
+  border-radius: 10px;
+  border: 1.5px solid #000;
+  padding: 14px 25px;
+  font-family: Roboto, sans-serif;
+  line-height: 21px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* Main */
+.main {
+  background-color: var(--blue);
+  padding-top: 121px;
+  padding-bottom: 128px;
+}
+.movie-genre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 128px;
+}
+
+/* Genre Description */
+.genre-description {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.genre-logo {
+  width: 58px;
+  height: 58px;
+  margin-right: 21px;
+}
+.desc-paragraph {
+  width: 577px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.07em;
+}
+
+/* Movie List */
+.movie-list {
+  display: flex;
+  align-items: center;
+}
+.movie-cards {
+  width: 798px;
+  height: 196px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--transparent);
+  box-shadow: 0px 8px 32px #000c48;
+  border-radius: 10px;
+}
+.movie-cards img {
+  width: 100px;
+  height: 148px;
+  border-radius: 10px;
+  margin: 0 15px;
+}
+.left-arrow-btn,
+.right-arrow-btn {
+  width: 49px;
+  height: 49px;
+  background-color: var(--transparent);
+  box-shadow: 0px 8px 32px #000c48;
+  border-radius: 50%;
+}
+.left-arrow-btn {
+  padding: 8px 10px 8px 6px;
+  margin-right: 40px;
+}
+.right-arrow-btn {
+  padding: 8px 6px 8px 10px;
+  margin-left: 40px;
+}
+.left-arrow-btn img,
+.right-arrow-btn img {
+  width: 33px;
+  height: 33px;
+}
+
+/* Other */
+.btn {
+  cursor: pointer;
 }

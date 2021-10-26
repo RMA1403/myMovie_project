@@ -1,0 +1,148 @@
+:root {
+  --green: #77d970;
+  --blue: #172774;
+  --yellow: #d7d970;
+  --transparent: rgba(238, 238, 238, 0.35);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  background-color: var(--blue);
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 23px 104px;
+  background-color: #fff;
+  width: 100%;
+}
+.back-btn {
+  width: 81px;
+  height: 35px;
+  background-color: var(--blue);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  color: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.searchbar {
+  width: 561px;
+  height: 49px;
+  border: 1.5px solid #000;
+  border-radius: 10px;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  padding: 14px 25px;
+}
+.page-title {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 900;
+  font-size: 35.0418px;
+  line-height: 44px;
+  color: var(--green);
+}
+.page-title .my {
+  color: var(--blue);
+}
+
+/* Main */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 104px;
+}
+.container {
+  display: grid;
+  grid-template-columns: 3fr 7fr 2fr;
+  column-gap: 25px;
+  color: #fff;
+}
+.movie-poster {
+  border-radius: 10px;
+  width: 100%;
+}
+.movie-title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  font-family: "Source Sans Pro", sans-serif;
+  margin-bottom: 15px;
+}
+.movie-actor-director {
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  margin-bottom: 15px;
+}
+.plot {
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 15px;
+}
+.details {
+  list-style: none;
+  font-size: 12px;
+}
+.details li {
+  margin-bottom: 14px;
+}
+
+/* Rating */
+.rating {
+  display: flex;
+  flex-direction: column;
+}
+.rating-container {
+  background-color: var(--transparent);
+  box-shadow: 0px 8px 32px #000c48;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 27px;
+  height: 150px;
+  justify-content: space-between;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 25px;
+}
+.rating-imdb img {
+  width: 89px;
+}
+.rating-imdb h3 {
+  color: var(--green);
+}
+.rating-metacritic img {
+  width: 127px;
+}
+.rating-metacritic h3 {
+  color: var(--yellow);
+}
+.rating-metacritic {
+  height: 138px;
+}
