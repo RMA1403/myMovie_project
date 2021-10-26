@@ -11,55 +11,54 @@
 }
 
 body {
-  font-family: Roboto, sans-serif;
   background-color: var(--blue);
+  font-family: Roboto, sans-serif;
 }
 a {
-  text-decoration: none;
   color: #000;
+  text-decoration: none;
+}
+li {
+  list-style: none;
 }
 
 /* Header */
 .header {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 23px 104px;
   background-color: #fff;
-  width: 100%;
+  padding: 23px 104px;
 }
 .back-btn {
   width: 81px;
   height: 35px;
-  background-color: var(--blue);
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.1em;
-  color: #fff;
-  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--blue);
+  color: #fff;
+  border-radius: 5px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 .searchbar {
   width: 561px;
   height: 49px;
+  padding: 14px 25px;
   border: 1.5px solid #000;
   border-radius: 10px;
   font-family: Roboto, sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21px;
-  padding: 14px 25px;
+  font-size: 1rem;
 }
 .page-title {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 900;
-  font-size: 35.0418px;
-  line-height: 44px;
   color: var(--green);
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2.1875rem;
+  font-weight: 900;
 }
 .page-title .my {
   color: var(--blue);
@@ -69,7 +68,6 @@ a {
 .main {
   display: flex;
   justify-content: center;
-  align-items: center;
   padding: 40px 104px;
 }
 .container {
@@ -79,32 +77,26 @@ a {
   color: #fff;
 }
 .movie-poster {
-  border-radius: 10px;
   width: 100%;
+  border-radius: 10px;
 }
 .movie-title {
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: 700;
-  font-family: "Source Sans Pro", sans-serif;
   margin-bottom: 15px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 .movie-actor-director {
   display: grid;
   grid-template-columns: 4fr 3fr;
-  font-size: 14px;
+  margin-bottom: 15px;
+  font-size: 0.875rem;
   font-weight: 500;
-  line-height: 16px;
-  margin-bottom: 15px;
 }
-.plot {
-  font-size: 12px;
-  line-height: 14px;
-  margin-bottom: 15px;
-}
+.plot,
 .details {
-  list-style: none;
-  font-size: 12px;
+  margin-bottom: 15px;
+  font-size: 0.875rem;
 }
 .details li {
   margin-bottom: 14px;
@@ -116,33 +108,30 @@ a {
   flex-direction: column;
 }
 .rating-container {
-  background-color: var(--transparent);
-  box-shadow: 0px 8px 32px #000c48;
-  border-radius: 7px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 0 27px;
-  height: 150px;
   justify-content: space-between;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
+  background-color: var(--transparent);
+  padding: 20px 0 27px;
+  border-radius: 7px;
   margin-bottom: 25px;
+  box-shadow: 0px 8px 32px #000c48;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.rating-imdb {
+  height: 150px;
+  color: var(--green);
+}
+.rating-metacritic {
+  height: 133px;
+  color: var(--yellow);
 }
 .rating-imdb img {
   width: 89px;
 }
-.rating-imdb h3 {
-  color: var(--green);
-}
 .rating-metacritic img {
   width: 127px;
-}
-.rating-metacritic h3 {
-  color: var(--yellow);
-}
-.rating-metacritic {
-  height: 138px;
 }
