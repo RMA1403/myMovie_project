@@ -24,8 +24,13 @@
         laoreet in sodales a, venenatis eu quam. Praesent eu posuere orci. Fusce
         nec ex quis nunc tincidunt bibendum sed in magna.
       </p>
-      <form>
-        <input class="searchbar" type="text" placeholder="some text" />
+      <form id="form">
+        <input
+          id="searchbar"
+          type="text"
+          placeholder="some text"
+          autocomplete="off"
+        />
       </form>
     </header>
 
@@ -45,18 +50,41 @@
         </div>
 
         <div class="movie-list">
-          <div class="left-arrow-btn btn">
+          <div class="left-arrow-btn btn" id="la-btn-action">
             <img src="images/icon/left-arrow.png" />
           </div>
-          <div class="movie-cards">
-            <a href="movie_page.html"><img src="images/shang-chi.jpg" /></a>
-            <a href="#"><img src="images/no_time_to_die.jpg" /></a>
-            <a href="#"><img src="images/squid_game.jpg" /></a>
-            <a href="#"><img src="images/dune.jpg" /></a>
-            <a href="#"><img src="images/free_guy.jpg" /></a>
-            <a href="#"><img src="images/eternals.jpg" /></a>
+          <div class="movie-cards" id="action-movie-cards">
+            <a href="movie_page.html" class="action-movie"
+              ><img src="images/the_godfather.jpg" data-movie="the+godfather"
+            /></a>
+            <a href="movie_page.html" class="action-movie"
+              ><img src="images/shang-chi.jpg" data-movie="shang+chi"
+            /></a>
+            <a href="movie_page.html" class="action-movie"
+              ><img src="images/no_time_to_die.jpg" data-movie="no+time+to+die"
+            /></a>
+            <a href="movie_page.html" class="action-movie"
+              ><img src="images/squid_game.jpg" data-movie="squid+game"
+            /></a>
+            <a href="movie_page.html" class="action-movie"
+              ><img src="images/dune.jpg" data-movie="dune" data-year="2021"
+            /></a>
+            <a href="movie_page.html" class="action-movie"
+              ><img src="images/free_guy.jpg" data-movie="free+guy"
+            /></a>
+            <a href="movie_page.html" class="action-movie"
+              ><img
+                src="images/eternals.jpg"
+                data-movie="eternals"
+                data-year="2021"
+            /></a>
+            <a href="movie_page.html" class="action-movie slide"
+              ><img
+                src="images/the_dark_knight.jpg"
+                data-movie="the+dark+knight"
+            /></a>
           </div>
-          <div class="right-arrow-btn btn">
+          <div class="right-arrow-btn btn" id="ra-btn-action">
             <img src="images/icon/right-arrow.png" />
           </div>
         </div>
@@ -77,18 +105,38 @@
         </div>
 
         <div class="movie-list">
-          <div class="left-arrow-btn btn">
+          <div class="left-arrow-btn btn" id="la-btn-horror">
             <img src="images/icon/left-arrow.png" />
           </div>
-          <div class="movie-cards">
-            <a href="#"><img src="images/halloween_kills.jpg" /></a>
-            <a href="#"><img src="images/annabelle.jpg" /></a>
-            <a href="#"><img src="images/midsommar.jpg" /></a>
-            <a href="#"><img src="images/the_nun.jpg" /></a>
-            <a href="#"><img src="images/the_conjuring.jpg" /></a>
-            <a href="#"><img src="images/it.jpg" /></a>
+          <div class="movie-cards" id="horror-movie-cards">
+            <a href="movie_page.html" class="horror-movie"
+              ><img
+                src="images/halloween_kills.jpg"
+                data-movie="halloween+kills"
+            /></a>
+            <a href="movie_page.html" class="horror-movie"
+              ><img src="images/annabelle.jpg" data-movie="annabelle"
+            /></a>
+            <a href="movie_page.html" class="horror-movie"
+              ><img src="images/midsommar.jpg" data-movie="midsommar"
+            /></a>
+            <a href="movie_page.html" class="horror-movie"
+              ><img src="images/the_nun.jpg" data-movie="the+nun"
+            /></a>
+            <a href="movie_page.html" class="horror-movie"
+              ><img src="images/the_conjuring.jpg" data-movie="the+conjuring"
+            /></a>
+            <a href="movie_page.html" class="horror-movie"
+              ><img src="images/it.jpg" data-movie="it"
+            /></a>
+            <a href="movie_page.html" class="horror-movie"
+              ><img src="images/the_godfather.jpg" data-movie="the+godfather"
+            /></a>
+            <a href="movie_page.html" class="horror-movie"
+              ><img src="images/shang-chi.jpg" data-movie="shang+chi"
+            /></a>
           </div>
-          <div class="right-arrow-btn btn">
+          <div class="right-arrow-btn btn" id="ra-btn-horror">
             <img src="images/icon/right-arrow.png" />
           </div>
         </div>
@@ -109,18 +157,36 @@
         </div>
 
         <div class="movie-list">
-          <div class="left-arrow-btn btn">
+          <div class="left-arrow-btn btn" id="la-btn-kids">
             <img src="images/icon/left-arrow.png" />
           </div>
-          <div class="movie-cards">
-            <a href="#"><img src="images/coco.jpg" /></a>
-            <a href="#"><img src="images/moana.jpg" /></a>
-            <a href="#"><img src="images/spongebob.jpg" /></a>
-            <a href="#"><img src="images/luca.jpg" /></a>
-            <a href="#"><img src="images/lion_king.jpg" /></a>
-            <a href="#"><img src="images/frozen_2.jpg" /></a>
+          <div class="movie-cards" id="kids-movie-cards">
+            <a href="movie_page.html" class="kids-movie"
+              ><img src="images/coco.jpg" data-movie="coco"
+            /></a>
+            <a href="movie_page.html" class="kids-movie"
+              ><img src="images/moana.jpg" data-movie="moana"
+            /></a>
+            <a href="movie_page.html" class="kids-movie"
+              ><img src="images/spongebob.jpg" data-movie="spongebob"
+            /></a>
+            <a href="movie_page.html" class="kids-movie"
+              ><img src="images/luca.jpg" data-movie="luca"
+            /></a>
+            <a href="movie_page.html" class="kids-movie"
+              ><img src="images/lion_king.jpg" data-movie="lion+king"
+            /></a>
+            <a href="movie_page.html" class="kids-movie"
+              ><img src="images/frozen_2.jpg" data-movie="frozen+II"
+            /></a>
+            <a href="movie_page.html" class="kids-movie"
+              ><img src="images/the_godfather.jpg" data-movie="the+godfather"
+            /></a>
+            <a href="movie_page.html" class="kids-movie"
+              ><img src="images/shang-chi.jpg" data-movie="shang+chi"
+            /></a>
           </div>
-          <div class="right-arrow-btn btn">
+          <div class="right-arrow-btn btn" id="ra-btn-kids">
             <img src="images/icon/right-arrow.png" />
           </div>
         </div>
@@ -141,18 +207,44 @@
         </div>
 
         <div class="movie-list">
-          <div class="left-arrow-btn btn">
+          <div class="left-arrow-btn btn" id="la-btn-star">
             <img src="images/icon/left-arrow.png" />
           </div>
-          <div class="movie-cards">
-            <a href="#"><img src="images/shawshank_redemption.jpg" /></a>
-            <a href="#"><img src="images/the_godfather.jpg" /></a>
-            <a href="#"><img src="images/the_dark_knight.jpg" /></a>
-            <a href="#"><img src="images/12_angry_men.jpg" /></a>
-            <a href="#"><img src="images/schindler's_list.jpg" /></a>
-            <a href="#"><img src="images/lotr_rotk.jpg" /></a>
+          <div class="movie-cards" id="star-movie-cards">
+            <a href="movie_page.html" class="star-movie"
+              ><img
+                src="images/shawshank_redemption.jpg"
+                data-movie="shawshank+redemption"
+            /></a>
+            <a href="movie_page.html" class="star-movie"
+              ><img src="images/the_godfather.jpg" data-movie="the+godfather"
+            /></a>
+            <a href="movie_page.html" class="star-movie"
+              ><img
+                src="images/the_dark_knight.jpg"
+                data-movie="the+dark+knight"
+            /></a>
+            <a href="movie_page.html" class="star-movie"
+              ><img src="images/12_angry_men.jpg" data-movie="12+angry+men"
+            /></a>
+            <a href="movie_page.html" class="star-movie"
+              ><img
+                src="images/schindler's_list.jpg"
+                data-movie="schindler's+list"
+            /></a>
+            <a href="movie_page.html" class="star-movie"
+              ><img
+                src="images/lotr_rotk.jpg"
+                data-movie="the+lord+of+the+rings+the+return+of+the+king"
+            /></a>
+            <a href="movie_page.html" class="star-movie"
+              ><img src="images/lion_king.jpg" data-movie="lion+king"
+            /></a>
+            <a href="movie_page.html" class="star-movie"
+              ><img src="images/frozen_2.jpg" data-movie="frozen+II"
+            /></a>
           </div>
-          <div class="right-arrow-btn btn">
+          <div class="right-arrow-btn btn" id="ra-btn-star">
             <img src="images/icon/right-arrow.png" />
           </div>
         </div>
@@ -162,5 +254,7 @@
     <footer class="footer">
       <p>Created by Rava Maulana &copy 2021</p>
     </footer>
+
+    <script src="main_page_script.js"></script>
   </body>
 </html>

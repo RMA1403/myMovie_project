@@ -17,7 +17,7 @@
 
   <body>
     <header class="header">
-      <a href="main_page.html" class="btn back-btn"><span>Back</span></a>
+      <a href="main_page.html" id="back-btn"><span>Back</span></a>
       <form>
         <input class="searchbar" type="text" placeholder="some text" />
       </form>
@@ -26,41 +26,37 @@
 
     <main class="main">
       <div class="container">
-        <img class="movie-poster" src="images/shang-chi.jpg" />
+        <img id="movie-poster" src="" />
         <div class="movie-desc">
-          <h2 class="movie-title">
-            Shang-Chi and the Legend of the Ten Rings - 2021
-          </h2>
+          <h2 id="movie-title"></h2>
           <div class="movie-actor-director">
-            <p class="actor">Starring Simu Liu and Awkwafina</p>
-            <p class="director">Directed by Destin Daniel Cretton</p>
+            <p id="actor"></p>
+            <p id="director"></p>
           </div>
-          <p class="plot">
-            "Shang-Chi, the master of weaponry-based Kung Fu, is forced to
-            confront his past after being drawn into the Ten Rings
-            organization."
-          </p>
+          <p id="plot"></p>
           <ul class="details">
-            <li>Genre : Action, Adventure, Fantasy</li>
-            <li>Language : English, Mandarin</li>
-            <li>Runtime : 132 minute</li>
-            <li>Country : United States, Australia</li>
-            <li>Box Office : $208,256,765</li>
-            <li>Award : -</li>
+            <li id="genre"></li>
+            <li id="language"></li>
+            <li id="runtime"></li>
+            <li id="country"></li>
+            <li id="box-office"></li>
+            <li id="award"></li>
           </ul>
         </div>
         <div class="rating">
           <div class="rating-container rating-imdb">
             <img src="images/imdb_logo.png" />
-            <h3>7.9 / 10</h3>
+            <h3 id="imdb"></h3>
           </div>
 
           <div class="rating-container rating-metacritic">
             <img src="images/metacritic_logo.png" />
-            <h3>71 / 100</h3>
+            <h3 id="metacritic"></h3>
           </div>
         </div>
       </div>
     </main>
+
+    <script src="movie_page_script.js"></script>
   </body>
 </html>

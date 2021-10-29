@@ -31,7 +31,7 @@ li {
   background-color: #fff;
   padding: 23px 104px;
 }
-.back-btn {
+#back-btn {
   width: 81px;
   height: 35px;
   display: flex;
@@ -76,11 +76,11 @@ li {
   column-gap: 25px;
   color: #fff;
 }
-.movie-poster {
+#movie-poster {
   width: 100%;
   border-radius: 10px;
 }
-.movie-title {
+#movie-title {
   margin-bottom: 15px;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.5rem;
@@ -93,7 +93,7 @@ li {
   font-size: 0.875rem;
   font-weight: 500;
 }
-.plot,
+#plot,
 .details {
   margin-bottom: 15px;
   font-size: 0.875rem;
@@ -134,4 +134,9 @@ li {
 }
 .rating-metacritic img {
   width: 127px;
+}
+
+/* Utility */
+.hidden {
+  visibility: hidden;
 }
