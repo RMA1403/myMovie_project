@@ -16,17 +16,23 @@
   </head>
 
   <body>
-    <header class="header">
+    <header>
       <a href="main_page.html" id="back-btn"><span>Back</span></a>
-      <form>
-        <input class="searchbar" type="text" placeholder="some text" />
+      <form id="form">
+        <input
+          id="searchbar"
+          type="text"
+          placeholder="ex: The Godfather or Black Widow [2021]"
+          autocomplete="off"
+          spellcheck="false"
+        />
       </form>
-      <h1 class="page-title"><span class="my">my</span>Movie</h1>
+      <h1 class="page-title"><span>my</span>Movie</h1>
     </header>
 
-    <main class="main">
-      <div class="container">
-        <img id="movie-poster" src="" />
+    <main>
+      <div class="grid-container hidden">
+        <img id="movie-poster" src="" alt="movie poster" />
         <div class="movie-desc">
           <h2 id="movie-title"></h2>
           <div class="movie-actor-director">
@@ -34,7 +40,8 @@
             <p id="director"></p>
           </div>
           <p id="plot"></p>
-          <ul class="details">
+
+          <ul>
             <li id="genre"></li>
             <li id="language"></li>
             <li id="runtime"></li>
@@ -45,15 +52,19 @@
         </div>
         <div class="rating">
           <div class="rating-container rating-imdb">
-            <img src="images/imdb_logo.png" />
+            <img src="images/imdb_logo.png" alt="imdb logo" />
             <h3 id="imdb"></h3>
           </div>
 
           <div class="rating-container rating-metacritic">
-            <img src="images/metacritic_logo.png" />
+            <img src="images/metacritic_logo.png" alt="metacritic logo" />
             <h3 id="metacritic"></h3>
           </div>
         </div>
+      </div>
+
+      <div id="loading">
+        <p id="loading-par">Loading Your Movie</p>
       </div>
     </main>
 

@@ -8,7 +8,6 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: Roboto, sans-serif;
 }
@@ -27,10 +26,10 @@ body {
   font-size: 4rem;
   font-weight: 900;
 }
-.page-title .my {
+.page-title span {
   color: var(--blue);
 }
-.title-paragraph {
+.header p {
   width: 443px;
   margin-bottom: 45px;
   text-align: center;
@@ -49,11 +48,11 @@ body {
 }
 
 /* Main */
-.main {
+main {
   background-color: var(--blue);
   padding: 121px 0 84px;
 }
-.movie-genre {
+.movie-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,12 +66,12 @@ body {
   color: #fff;
   margin-bottom: 20px;
 }
-.genre-logo {
+.genre-description img {
   width: 58px;
   height: 58px;
   margin-right: 21px;
 }
-.desc-paragraph {
+.genre-description p {
   width: 577px;
   font-size: 0.75rem;
   letter-spacing: 0.07em;
@@ -83,7 +82,7 @@ body {
   display: flex;
   align-items: center;
 }
-.movie-cards {
+.movie-poster {
   width: 798px;
   height: 196px;
   display: flex;
@@ -93,20 +92,19 @@ body {
   border-radius: 10px;
   box-shadow: 0px 8px 32px #000c48;
   overflow: hidden;
+  margin: 0 40px;
 }
-.movie-cards a {
+.movie-poster a {
   margin: 0 15px;
   transform: translateX(-130px);
 }
-.slide {
-  transition: transform 0.5s;
-}
-.movie-cards img {
+.movie-poster img {
   width: 100px;
   height: 148px;
   border-radius: 10px;
-  border-radius: 10px;
 }
+
+/* Arrow Buttons */
 .left-arrow-btn,
 .right-arrow-btn {
   width: 49px;
@@ -118,11 +116,9 @@ body {
 }
 .left-arrow-btn {
   padding: 8px 10px 8px 6px;
-  margin-right: 40px;
 }
 .right-arrow-btn {
   padding: 8px 6px 8px 10px;
-  margin-left: 40px;
 }
 .left-arrow-btn img,
 .right-arrow-btn img {
@@ -131,9 +127,15 @@ body {
 }
 
 /* Footer */
-.footer {
+footer {
   height: 35px;
   padding-top: 8px;
   text-align: center;
   font-size: 0.9rem;
+  background-color: var(--green);
+}
+
+/* Other */
+.slide {
+  transition: transform 0.5s;
 }

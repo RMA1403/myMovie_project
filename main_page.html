@@ -17,8 +17,8 @@
 
   <body>
     <header class="header">
-      <h1 class="page-title"><span class="my">my</span>Movie</h1>
-      <p class="title-paragraph">
+      <h1 class="page-title"><span>my</span>Movie</h1>
+      <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac
         accumsan velit. Duis posuere eu enim euismod congue. In purus nibh,
         laoreet in sodales a, venenatis eu quam. Praesent eu posuere orci. Fusce
@@ -28,21 +28,18 @@
         <input
           id="searchbar"
           type="text"
-          placeholder="some text"
+          placeholder="ex: The Godfather or Black Widow [2021]"
           autocomplete="off"
+          spellcheck="false"
         />
       </form>
     </header>
 
-    <main class="main">
-      <div class="movie-genre">
+    <main>
+      <div class="movie-container">
         <div class="genre-description">
-          <img
-            class="genre-logo"
-            src="images/icon/target.png"
-            alt="target icon"
-          />
-          <p class="desc-paragraph">
+          <img src="images/icon/target.png" alt="target icon" />
+          <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
             ac accumsan velit. Duis posuere eu enim euismod congue. In purus
             nibh, laoreet in sodales a, venenatis eu quam.
@@ -50,10 +47,11 @@
         </div>
 
         <div class="movie-list">
-          <div class="left-arrow-btn btn" id="la-btn-action">
+          <div class="left-arrow-btn" id="la-btn-action">
             <img src="images/icon/left-arrow.png" />
           </div>
-          <div class="movie-cards" id="action-movie-cards">
+
+          <div class="movie-poster" id="action-movie-poster">
             <a href="movie_page.html" class="action-movie"
               ><img src="images/the_godfather.jpg" data-movie="the+godfather"
             /></a>
@@ -78,26 +76,23 @@
                 data-movie="eternals"
                 data-year="2021"
             /></a>
-            <a href="movie_page.html" class="action-movie slide"
+            <a href="movie_page.html" class="action-movie"
               ><img
                 src="images/the_dark_knight.jpg"
                 data-movie="the+dark+knight"
             /></a>
           </div>
-          <div class="right-arrow-btn btn" id="ra-btn-action">
+
+          <div class="right-arrow-btn" id="ra-btn-action">
             <img src="images/icon/right-arrow.png" />
           </div>
         </div>
       </div>
 
-      <div class="movie-genre">
+      <div class="movie-container">
         <div class="genre-description">
-          <img
-            class="genre-logo"
-            src="images/icon/ghost.png"
-            alt="target icon"
-          />
-          <p class="desc-paragraph">
+          <img src="images/icon/ghost.png" alt="ghost icon" />
+          <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
             ac accumsan velit. Duis posuere eu enim euismod congue. In purus
             nibh, laoreet in sodales a, venenatis eu quam.
@@ -105,10 +100,11 @@
         </div>
 
         <div class="movie-list">
-          <div class="left-arrow-btn btn" id="la-btn-horror">
+          <div class="left-arrow-btn" id="la-btn-horror">
             <img src="images/icon/left-arrow.png" />
           </div>
-          <div class="movie-cards" id="horror-movie-cards">
+
+          <div class="movie-poster" id="horror-movie-poster">
             <a href="movie_page.html" class="horror-movie"
               ><img
                 src="images/halloween_kills.jpg"
@@ -136,20 +132,17 @@
               ><img src="images/shang-chi.jpg" data-movie="shang+chi"
             /></a>
           </div>
-          <div class="right-arrow-btn btn" id="ra-btn-horror">
+
+          <div class="right-arrow-btn" id="ra-btn-horror">
             <img src="images/icon/right-arrow.png" />
           </div>
         </div>
       </div>
 
-      <div class="movie-genre">
+      <div class="movie-container">
         <div class="genre-description">
-          <img
-            class="genre-logo"
-            src="images/icon/baby-boy.png"
-            alt="target icon"
-          />
-          <p class="desc-paragraph">
+          <img src="images/icon/baby-boy.png" alt="baby icon" />
+          <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
             ac accumsan velit. Duis posuere eu enim euismod congue. In purus
             nibh, laoreet in sodales a, venenatis eu quam.
@@ -157,10 +150,11 @@
         </div>
 
         <div class="movie-list">
-          <div class="left-arrow-btn btn" id="la-btn-kids">
+          <div class="left-arrow-btn" id="la-btn-kids">
             <img src="images/icon/left-arrow.png" />
           </div>
-          <div class="movie-cards" id="kids-movie-cards">
+
+          <div class="movie-poster" id="kids-movie-poster">
             <a href="movie_page.html" class="kids-movie"
               ><img src="images/coco.jpg" data-movie="coco"
             /></a>
@@ -186,20 +180,17 @@
               ><img src="images/shang-chi.jpg" data-movie="shang+chi"
             /></a>
           </div>
-          <div class="right-arrow-btn btn" id="ra-btn-kids">
+
+          <div class="right-arrow-btn" id="ra-btn-kids">
             <img src="images/icon/right-arrow.png" />
           </div>
         </div>
       </div>
 
-      <div class="movie-genre">
+      <div class="movie-container">
         <div class="genre-description">
-          <img
-            class="genre-logo"
-            src="images/icon/star.png"
-            alt="target icon"
-          />
-          <p class="desc-paragraph">
+          <img src="images/icon/star.png" alt="star icon" />
+          <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
             ac accumsan velit. Duis posuere eu enim euismod congue. In purus
             nibh, laoreet in sodales a, venenatis eu quam.
@@ -207,10 +198,11 @@
         </div>
 
         <div class="movie-list">
-          <div class="left-arrow-btn btn" id="la-btn-star">
+          <div class="left-arrow-btn" id="la-btn-star">
             <img src="images/icon/left-arrow.png" />
           </div>
-          <div class="movie-cards" id="star-movie-cards">
+
+          <div class="movie-poster" id="star-movie-poster">
             <a href="movie_page.html" class="star-movie"
               ><img
                 src="images/shawshank_redemption.jpg"
@@ -244,14 +236,15 @@
               ><img src="images/frozen_2.jpg" data-movie="frozen+II"
             /></a>
           </div>
-          <div class="right-arrow-btn btn" id="ra-btn-star">
+
+          <div class="right-arrow-btn" id="ra-btn-star">
             <img src="images/icon/right-arrow.png" />
           </div>
         </div>
       </div>
     </main>
 
-    <footer class="footer">
+    <footer>
       <p>Created by Rava Maulana &copy 2021</p>
     </footer>
 

@@ -10,8 +10,8 @@ const slideRight = function (genre) {
   });
 
   setTimeout(() => {
-    document.getElementById(`${genre}-movie-cards`).removeChild(movies[0]);
-    document.getElementById(`${genre}-movie-cards`).appendChild(movies[0]);
+    document.getElementById(`${genre}-movie-poster`).removeChild(movies[0]);
+    document.getElementById(`${genre}-movie-poster`).appendChild(movies[0]);
     movies.forEach((mov) => {
       mov.classList.remove("slide");
       mov.style.transform = "translateX(-130px)";
@@ -30,10 +30,10 @@ const slideLeft = function (genre) {
 
   setTimeout(() => {
     document
-      .getElementById(`${genre}-movie-cards`)
+      .getElementById(`${genre}-movie-poster`)
       .removeChild(movies[movies.length - 1]);
     document
-      .getElementById(`${genre}-movie-cards`)
+      .getElementById(`${genre}-movie-poster`)
       .insertAdjacentElement("afterbegin", movies[movies.length - 1]);
     movies.forEach((mov) => {
       mov.classList.remove("slide");
@@ -43,8 +43,10 @@ const slideLeft = function (genre) {
 };
 
 // Get the movie url on click
-document.querySelectorAll(".movie-cards").forEach((el) =>
+document.querySelectorAll(".movie-poster").forEach((el) =>
   el.addEventListener("click", (ev) => {
+    sessionStorage.removeItem("movie");
+    sessionStorage.removeItem("year");
     if (ev.target.dataset.movie) {
       sessionStorage.movie = ev.target.dataset.movie;
       if (ev.target.dataset.year) {
@@ -60,33 +62,30 @@ document
   .addEventListener("submit", (ev) => ev.preventDefault());
 document.getElementById("searchbar").addEventListener("keyup", (ev) => {
   if (ev.key == "Enter") {
-    sessionStorage.movie = ev.target.value.split(" ").join("+");
+    sessionStorage.removeItem("movie");
+    sessionStorage.removeItem("year");
+    const userInput = ev.target.value;
+    if (userInput.indexOf("[") != -1 && userInput.indexOf("]") != -1) {
+      sessionStorage.movie = userInput
+        .slice(0, userInput.indexOf("["))
+        .split(" ")
+        .join("+");
+      sessionStorage.year = userInput.slice(
+        userInput.indexOf("[") + 1,
+        userInput.indexOf("]")
+      );
+    } else {
+      sessionStorage.movie = userInput.split(" ").join("+");
+    }
     window.location.href = "movie_page.html";
   }
 });
 
 // Left and right button on click
+const genre = ["action", "horror", "kids", "star"];
 document
-  .getElementById("ra-btn-action")
-  .addEventListener("click", () => slideRight("action"));
+  .querySelectorAll(".right-arrow-btn")
+  .forEach((el, i) => el.addEventListener("click", () => slideRight(genre[i])));
 document
-  .getElementById("la-btn-action")
-  .addEventListener("click", () => slideLeft("action"));
-document
-  .getElementById("ra-btn-horror")
-  .addEventListener("click", () => slideRight("horror"));
-document
-  .getElementById("la-btn-horror")
-  .addEventListener("click", () => slideLeft("horror"));
-document
-  .getElementById("ra-btn-kids")
-  .addEventListener("click", () => slideRight("kids"));
-document
-  .getElementById("la-btn-kids")
-  .addEventListener("click", () => slideLeft("kids"));
-document
-  .getElementById("ra-btn-star")
-  .addEventListener("click", () => slideRight("star"));
-document
-  .getElementById("la-btn-star")
-  .addEventListener("click", () => slideLeft("star"));
+  .querySelectorAll(".left-arrow-btn")
+  .forEach((el, i) => el.addEventListener("click", () => slideLeft(genre[i])));
